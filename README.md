@@ -1,5 +1,7 @@
 # ToricCodeRL
 
+Contains the code for https://arxiv.org/abs/1811.12338
+
 # Training a new RL agent
 1) In AllSettings.py, choose the desired parameters for the training. The most important parameter to specify is the size of the training data to be generated.
 
