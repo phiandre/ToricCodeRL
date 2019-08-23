@@ -2,8 +2,8 @@
 import numpy as np
 from RL import RLsys
 from Env import Env
-from BlossomEnv import Env as BEnv
-from Blossom import Blossom
+#from BlossomEnv import Env as BEnv
+#from Blossom import Blossom
 from keras.models import load_model
 from GenerateData import Generate
 from Drawer import Drawer
@@ -56,9 +56,8 @@ class MainClass:
 				human=humRep[:,:,i]
 
 				env = Env(state, human, checkGroundState=True)
-
+				'''
 				blossomReward = 0
-
 				if np.count_nonzero(state) > 0:
 					state_ = np.copy(state)
 					state_ = self.labelState(state_,size)
@@ -74,7 +73,7 @@ class MainClass:
 					if blossomReward != Benv.correctGsR:
 						numberOfLogicalErrorsMWPM += 1
 
-
+				'''
 				r = env.correctGsR
 				numIter = 0
 
@@ -103,7 +102,7 @@ class MainClass:
 				if ((i+1)%100 == 0):
 					print("Iteration: ", str(i))
 					print("Logical error probability RL agent: ", numberOfLogicalErrorsRL/(i+1))
-					print("Logical error probability MWPM: ", numberOfLogicalErrorsMWPM / (i + 1))
+					#print("Logical error probability MWPM: ", numberOfLogicalErrorsMWPM / (i + 1))
 
 
 
