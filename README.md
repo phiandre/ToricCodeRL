@@ -6,7 +6,7 @@ Contains the code for https://arxiv.org/abs/1811.12338
 
 _Philip Andreasson, Joel Johansson, Simon Liljestrand, Mats Granath_
 
-Code for depolarizing noise: https://arxiv.org/abs/1912.12919
+Code for depolarizing noise: https://github.com/mats-granath/toric-RL-decoder
 
 # Training a new RL agent
 1) In AllSettings.py, choose the desired parameters for the training. The most important parameter to specify is the size of the training data to be generated.
